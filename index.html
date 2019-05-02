@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tic-tac-toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+
+    <script src="./node_modules/sinon/pkg/sinon.js"></script>
+    <script src="https://unpkg.com/chai/chai.js"></script>
+    <script src="https://unpkg.com/mocha/mocha.js"></script>
+</head>
+<body>
+    <div id="container" class="container">
+        <div id="information">
+            <div data-component="fieldUser" id="user">
+                <input class="user-name" data-component="name" type="text" placeholder="Введите имя и нажмите старт" id="user-name-input">
+            </div>
+            <div id="boxSide">
+                <input data-component="radioChoice" type="radio" id="choiceX" class="radioChoice" name="lol" value="X" checked>
+                <label for="choiceX">X</label>
+                <input data-component="radioChoice" type="radio" id="choiceO" class="radioChoice" name="lol" value="O">
+                <label for="choiceO">O</label>
+            </div>
+        </div>
+        <div id="billboard">
+            <div data-component="showTurn" id="billboard-text">Начните игру</div>
+            <div data-component="spinner" class="spinner"></div>
+        </div>
+
+        <table class="game">
+            <tr>
+                <td data-component="cell"></td>
+                <td data-component="cell"></td>
+                <td data-component="cell"></td>
+            </tr>
+            <tr>
+                <td data-component="cell"></td>
+                <td data-component="cell"></td>
+                <td data-component="cell"></td>
+            </tr>
+            <tr>
+                <td data-component="cell"></td>
+                <td data-component="cell"></td>
+                <td data-component="cell"></td>
+            </tr>
+        </table>
+
+        <button data-component="btnStart" id="btnStart">Start</button>
+    </div>
+
+    <div id="mocha"></div>
+
+    <script src="script.js"></script>
+    <script src="test.js"></script>
+</body>
+</html>
